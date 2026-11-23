@@ -1,0 +1,117 @@
+{
+    "data_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+    "raw_rows": 731,
+    "features": [
+        "weekday_sin",
+        "weekday_cos",
+        "annual_sin",
+        "annual_cos",
+        "trend_days",
+        "holiday",
+        "workingday",
+        "lag_1",
+        "lag_7",
+        "lag_14",
+        "mean_7",
+        "mean_28",
+        "std_7"
+    ],
+    "validation_start": "2012-01-01",
+    "validation_end": "2012-03-31",
+    "test_start": "2012-04-01",
+    "test_end": "2012-12-31",
+    "smoke": false,
+    "horizons": [
+        {
+            "horizon_days": 1,
+            "selected_model": "regularized_tree",
+            "days": 275,
+            "metrics": {
+                "persistence": {
+                    "mae": 874.290909090909,
+                    "rmse": 1270.091043264938,
+                    "wape_percent": 14.270367160883655
+                },
+                "weekly_baseline": {
+                    "mae": 1137.8690909090908,
+                    "rmse": 1619.0690344089155,
+                    "wape_percent": 18.572547809261522
+                },
+                "poisson": {
+                    "mae": 981.0518620271134,
+                    "rmse": 1386.577059120393,
+                    "wape_percent": 16.012942751003443
+                },
+                "tree": {
+                    "mae": 1014.8929289360865,
+                    "rmse": 1306.3995868718823,
+                    "wape_percent": 16.56530403588655
+                }
+            },
+            "mae_reduction_vs_weekly_percent": 10.807584365856492,
+            "interval": {
+                "nominal_coverage": 0.8,
+                "observed_coverage": 0.6,
+                "mean_width": 2444.5371470836412,
+                "pinball_0.1": 268.36648534329197,
+                "pinball_0.9": 203.17960708209654
+            },
+            "paired_block_bootstrap": {
+                "mean_mae_gain": 122.97616197300442,
+                "lower_95": -21.967804829407246,
+                "upper_95": 290.72185519120643,
+                "block_days": 7,
+                "resamples": 2000
+            }
+        },
+        {
+            "horizon_days": 7,
+            "selected_model": "medium_tree",
+            "days": 275,
+            "metrics": {
+                "persistence": {
+                    "mae": 1137.8690909090908,
+                    "rmse": 1619.0690344089155,
+                    "wape_percent": 18.572547809261522
+                },
+                "weekly_baseline": {
+                    "mae": 1137.8690909090908,
+                    "rmse": 1619.0690344089155,
+                    "wape_percent": 18.572547809261522
+                },
+                "poisson": {
+                    "mae": 1224.683430909253,
+                    "rmse": 1650.0011029443024,
+                    "wape_percent": 19.989550426754466
+                },
+                "tree": {
+                    "mae": 1255.917704215827,
+                    "rmse": 1630.1497838049584,
+                    "wape_percent": 20.499363057142748
+                }
+            },
+            "mae_reduction_vs_weekly_percent": -10.374533788629602,
+            "interval": {
+                "nominal_coverage": 0.8,
+                "observed_coverage": 0.5963636363636363,
+                "mean_width": 2528.277069988252,
+                "pinball_0.1": 324.06636693574785,
+                "pinball_0.9": 212.87910858815374
+            },
+            "paired_block_bootstrap": {
+                "mean_mae_gain": -118.04861330673604,
+                "lower_95": -283.9808739847335,
+                "upper_95": 74.84882871988368,
+                "block_days": 7,
+                "resamples": 2000
+            }
+        }
+    ],
+    "versions": {
+        "python": "3.10.12",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "scikit_learn": "1.5.2",
+        "lightgbm": "4.5.0"
+    }
+}
