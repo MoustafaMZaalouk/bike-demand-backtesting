@@ -33,8 +33,7 @@ two-stage workflow. Fixed seeds, single-thread model training, pinned direct
 and transitive dependencies, and a dataset SHA-256 support reproducibility.
 Exact floating-point bytes are not promised on other operating systems or
 library builds. The CI workflow runs lint, tests and a short, date-subsampled
-train/eval job. It is provided but has not been run on GitHub because this
-repository has not been published.
+train/eval job. The workflow is now published; check the repository Actions tab for the current run status.
 
 Optional source re-download, with a checksum check before replacing the CSV:
 
