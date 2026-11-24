@@ -1,5 +1,9 @@
 # Bike Demand Backtesting
 
+[![CI](https://github.com/MoustafaMZaalouk/bike-demand-backtesting/workflows/checks/badge.svg)](https://github.com/MoustafaMZaalouk/bike-demand-backtesting/blob/main/.github/workflows/ci.yml)
+
+*Live workflow status, not a production-readiness or model-quality rating.*
+
 A small, AI-assisted portfolio project for Moustafa Zaalouk. Predict daily
 Capital Bikeshare rentals from past demand and known calendar information,
 then check whether more complex models actually beat simple baselines.
